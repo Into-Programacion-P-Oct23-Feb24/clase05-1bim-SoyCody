@@ -30,11 +30,16 @@ public class Ejemplo3 {
                 System.out.printf("Estudiante en suspenso con un "
                         + "promedio: %.2f\n", promedio);
             } else {
-                System.out.printf("Estudiante reprobado con un "
-                        + "promedio: %.2f\n", promedio);
+                if ((promedio >= 3) && (promedio < 5)) {
+                    System.out.printf("Estudiante en recuperación con un "
+                            + "promedio: %.2f\n", promedio);
+                } else {
+                    if (promedio < 3) {
+                        System.out.printf("Estudiante reprobado con un "
+                                + "promedio; %.2f\n", promedio);
+                    }
+                }
             }
-
         }
     }
-
 }
